@@ -1,0 +1,239 @@
+/*Estilos para Bienvenida------------------------------------------------------------------------*/
+
+body p {
+    font-family: "Oswald", serif;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+} /*justificado y Arial del texto*/
+
+header{
+    background: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}/*Color del header*/
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+} /* Ubica los titulos del menu principal de manera centrada y en orden */
+
+nav ul li {
+    margin: 0 15px;
+}/* Espacio entre los titulos del menu principal*/
+
+.TitulosIndice {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}/*Los titulos y su color y tamaño*/
+
+
+.contenido {
+    overflow: hidden; /* Evita que los elementos flotantes afecten el diseño */
+    margin-bottom: 20px;
+}
+
+.contenido img {
+    width: 250px;
+    height: auto;
+    border: 2px solid black; /* Borde negro delgado */
+}/*Edicion de las imagenes*/
+
+.float-left {
+    float: left;
+    margin-right: 15px;
+} /*clase para Llevar imagen a la izquierda*/
+
+.float-right {
+    float: right;
+    margin-left: 15px;
+}/*Clase para Llevar imagen a la derecha*/
+
+
+h1{
+    font-family: "Bebas Neue", serif;
+    text-align: center;
+    margin-top: 100px;
+    text-decoration: underline solid blue;
+
+} /*Titulo "Lugares Favoritos"*/
+
+h2 {
+    text-align: center;
+}/*Centrar titulo y subtitulos*/
+
+
+
+
+/* estilos para Datos Biograficos-------------------------------------------------------------*/
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+} /*Cuadrar Tabla*/
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+} /*Parametros de cada fila*/
+
+th {
+    background-color: #00194a;
+    color: white;
+    font-weight: bold;
+
+}/*Parametros de solamente la primera fila*/
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}/*Para que cada par se vea un color mas oscuro en cada fila, menos de la primera fila*/
+
+tr:nth-child(odd) {
+    background-color: #a9ff76;
+}
+tr:hover {
+    background-color: #ddd;
+}/*Cada que pase el cursor cambie de color, todas las filas menos la primera*/
+
+
+/*Hoja de vida-------------------------------------------------------------------*/
+
+
+nav ul li a {
+    font-family: "Dancing Script", serif;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}/*Los titulos y su color y tamaño*/
+
+.TitulosIndice:hover{
+    font-size: 30px;
+    color:bisque;
+}
+
+.Resaltar:hover{
+
+    font-size: 30px;
+    text-decoration: underline;
+    color:bisque;
+}
+
+main {
+    padding: 20px;
+}/*Margen de todo el main*/
+
+.indice ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+} /* Estilo para el índice */
+
+.indice ul li a {
+    color: #007BFF;
+    font-weight: bold;
+} /*Color de las palabras del indice*/
+
+section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 2px solid #333;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    border-radius: 8px;
+}/* Estilo para las secciones , cuadros grises*/
+
+
+ul li::marker {
+    color: #007BFF; /* Viñetas de color azul */
+}
+
+
+ol {
+    padding-left: 20px;
+}/* Estilo para listas ordenadas */
+
+
+ol li::marker {
+    color: #FF5733; /* Números de color naranja */
+}
+
+
+
+
+
+/*Estilos para Material de Interes-----------------------------------------------------------------------*/
+
+
+
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 0 auto; /* Centra el video */
+}/*Acomodar el video*/
+
+#st{
+    text-align: center;
+}/*Centrar texto con id="st" */
+
+
+
+
+.centradas img{
+    
+    display: inline-block;     
+    margin: 20px;      
+    height: 250px; 
+    width: auto;
+}
+
+
+#enlace{
+    display: inline-block;     
+    padding: 0;
+
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+} /*Texto del pie de pagina*/
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-vertical img{
+    margin: 0;
+}

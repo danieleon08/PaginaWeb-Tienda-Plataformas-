@@ -1,0 +1,186 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between; /* Nombre a la izquierda, carrito a la derecha */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Estilos para el emoji del carrito */
+.carrito {
+    font-size: 30px;
+}
+
+
+/* Estilos para la imagen del carrito (si usas la opción 2) */
+.carrito-img {
+    width: 24px;  /* Ajusta el tamaño */
+    height: auto;
+}
+
+/* Sección principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.info {
+    width: 50%;
+    background-color: #eee;
+    padding: 20px;
+    text-align: left;
+}
+
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333; /* Borde oscuro */
+    background-color: #444; /* Fondo más oscuro */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.flex-vertical li{
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.flex-vertical:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+ }
+
+.flex-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.iconoTarjeta {
+    width: 100%; /* Ajustar la imagen al tamaño del contenedor */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    max-height: 150px; /* Define una altura máxima para que las imágenes no sean demasiado grandes */
+    object-fit: cover; /* Ajusta la imagen manteniendo la proporción */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.flex-vertical p, .flex-vertical ul {
+    color: white; /* Texto blanco para contraste */
+}
+
+.flex-vertical button {
+    background-color: #4CAF50; /* Color verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.flex-vertical button:hover {
+    background-color: #45a049; /* Cambio de color al pasar el ratón */
+}
+
+
+.formulario {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+} /*Cuadrar Tabla*/
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+} /*Parametros de cada fila*/
+
+th {
+    background-color: #d8bb99 ;
+    color: black;
+    font-weight: bold;
+
+}/*Parametros de solamente la primera fila*/
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}/*Para que cada par se vea un color mas oscuro en cada fila, menos de la primera fila*/
+
+tr:nth-child(odd) {
+    background-color: #fff0f0;
+}
+tr:hover {
+    background-color: #ddd;
+}/*Cada que pase el cursor cambie de color, todas las filas menos la primera*/
+
+
+
+.btn-carrito {
+    background-color: #4CAF50; /* Color verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .tablaCarrito {
+    display: none;
+}
+
+
+
+
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+} /*Texto del pie de pagina*/

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="funcionalidad.js"> </script>
+</head>
+<body>
+
+    <!-- Encabezado -->
+     <header>
+        <h1>LionStream</h1>  
+        <span class="carrito">🛒</span>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec urna eget metus tincidunt accumsan.
+                Suspendisse potenti. Vestibulum fermentum lorem sit amet ligula facilisis, at tincidunt ligula sagittis.
+                Duis congue mi nec justo malesuada, ut facilisis est ullamcorper. Integer sed pharetra libero.
+                Aenean vel mi non lorem varius scelerisque. Nulla id enim sed eros dictum sodales. Fusce sagittis nec arcu ac consectetur.
+                Vestibulum cursus justo in purus scelerisque, id sagittis ligula molestie.</p>
+        </div>
+        <div class="tablaCarrito">
+            <table id="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body">
+        
+
+                </tbody>
+                    
+            </table>
+
+            <button id="vaciar-carrito" type="button">Vaciar carrito</button>
+        </div>
+
+    </main>
+
+
+    <h2>TIENDA</h2>
+
+    <div id="productos-container" class="flex-horizontal">
+
+
+        <div class="flex-vertical">
+            <img class="iconoTarjeta" src="Netflix.jpg" alt="Serie Favorita" >
+            <p>Netflix</p>
+            <ul>
+                <li>4k</li>
+                <li>28 dias</li>
+                <li>4 pantallas</li>
+            </ul>
+            <p>14.000</p>
+            <button class="btn-agregar" data-nombre="Netflix" data-precio="14000" data-imagen="Netflix.jpg" type="button">Agregar al carrito</button>
+        </div>
+        <div class="flex-vertical">
+            <img class="iconoTarjeta" src="amazonPrime.jpg" alt="Serie Favorita" >
+            <p>Amazon Prime</p>
+            <ul>
+                <li>4k</li>
+                <li>30 dias</li>
+                <li>2 pantallas</li>
+            </ul>
+            <p>7.000</p>
+            <button class="btn-agregar" data-nombre="Amazon" data-precio="7000" data-imagen="amazonPrime.jpg" type="button">Agregar al carrito</button>
+        </div>
+        <div class="flex-vertical">
+            <img class="iconoTarjeta" src="disnyePremium.jpg" alt="Serie Favorita" >
+            <p>Disney Premium</p>
+            <ul>
+                <li>HD</li>
+                <li>30 dias</li>
+                <li>1 pantalla</li>
+            </ul>
+            <p>12.000</p>
+            <button class="btn-agregar" data-nombre="Disney" data-precio="12000" data-imagen="disnyePremium.jpg" type="button">Agregar al carrito</button>
+        </div>
+
+    </div> 
+
+    <h2>------------------------------------  //  ------------------------------------</h2>
+   
+
+        <form class="formulario">
+            <fieldset>
+                <legend>Agregar Articulo</legend>
+
+                <label for="txtNombre">Nombre</label>
+                <input type="text" placeholder="Nombre" name="nombree" id="txtNombre" />
+
+                <label for="selectCalidad">Calidad</label>
+                <input list="selectCalidad" placeholder="Calidad" name="calidad" id="selectCalidad"/>
+
+                <datalist id="selectCalidad">
+                    <option value="HD"></option>
+                    <option value="4k"></option>
+                    <option value="estan">Estandar</option>
+                    <option value="bas">Basico</option>
+                </datalist>
+
+                <label for="txtDuracion">Duración (dias)</label>
+                <input type="text" placeholder="Duración" name="Duracion" id="txtDuracion" />
+
+                <label for="txtNumero">Numero de Pantallas</label>
+                <input type="number" placeholder="Numero" name="numero" id="txtNumero" />
+
+                <label for="imagen">Subir Imagen</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required/>
+
+                <label for="txtPrecio">Precio</label>
+                <input type="text" placeholder="Precio" name="precio" id="txtPrecio" />
+
+                <button type="submit" id="agregar-articulo">Agregar articulo</button>
+            </fieldset>
+        </form>
+
+
+    <footer>
+        <p>© 2025 Mi Página Web - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
