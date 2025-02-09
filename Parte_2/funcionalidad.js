@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para actualizar la tabla del carrito
     function actualizarCarrito() {
-        carritoBody.innerHTML = "";
+        carritoBody.innerHTML = ""; // Limpia la tabla antes de actualizar
+        let total = 0; // Variable para calcular el total
 
         carrito.forEach((producto, index) => {
             const fila = document.createElement("tr");
@@ -48,12 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             carritoBody.appendChild(fila);
-        });
 
+            // Sumar al total (precio * cantidad)
+            total += producto.precio * producto.cantidad;
+        });
+        
+
+        // Actualizar el total en la tabla
+        document.getElementById("total-precio").textContent = `${total.toLocaleString()} COP`;
+
+        // Agregar eventos de eliminar producto
         document.querySelectorAll(".btn-eliminar").forEach(btn => {
             btn.addEventListener("click", eliminarDelCarrito);
         });
+
+        // Mostrar la tabla solo si hay elementos en el carrito
+        tablaCarrito.style.display = carrito.length > 0 ? "block" : "none";
     }
+
 
     // Función para eliminar un producto del carrito
     function eliminarDelCarrito(event) {
@@ -63,10 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Función para vaciar el carrito
+
     function vaciarCarrito() {
-        carrito.length = 0;
-        actualizarCarrito();
+        carrito.length = 0; // Vacía la lista de productos
+        actualizarCarrito(); // Actualiza la tabla
+        document.getElementById("total-precio").textContent = "0 COP"; // Borra el total
     }
+
 
     // Función para agregar un nuevo artículo a la tienda
     function agregarNuevoArticulo() {

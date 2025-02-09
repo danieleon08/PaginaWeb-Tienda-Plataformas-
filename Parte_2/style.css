@@ -171,7 +171,15 @@ tr:hover {
     display: none;
 }
 
+tfoot {
+    background-color: #d8bb99; /* Color similar al encabezado */
+    font-weight: bold;
+}
 
+#total-precio {
+    font-size: 18px;
+    color: black;
+}
 
 
   footer {
