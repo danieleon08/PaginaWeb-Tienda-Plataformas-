@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Crear la tarjeta del nuevo producto
         const nuevaTarjeta = document.createElement("div");
-        nuevaTarjeta.classList.add("flex-vertical"); // Se usa la misma clase que las tarjetas originales
+        nuevaTarjeta.classList.add("flex-vertical", "nueva-tarjeta");
 
         nuevaTarjeta.innerHTML = `
             <img class="iconoTarjeta" src="${imagenURL}" alt="${nombre}">
