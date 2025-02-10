@@ -4,11 +4,12 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #fffec0;
 }
 
 /* Encabezado */
 header {
-    background-color: #ccc;
+    background-color: #cdca00;
     display: flex;
     justify-content: space-between; /* Nombre a la izquierda, carrito a la derecha */
     align-items: center;
@@ -16,12 +17,24 @@ header {
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 40px;
     margin: 0;
+    font-family: "Dancing Script", serif;
+}
+
+header h2{
+    font-size: 15px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
 }
 
 h2 {
     text-align: center;
+}
+
+.LionStream{
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* Estilos para el emoji del carrito */
@@ -46,9 +59,16 @@ main {
 
 .info {
     width: 50%;
-    background-color: #eee;
+    background-color: #444; /* Fondo más oscuro */;
+    border: 2px solid #cdca00; /* Borde oscuro */
     padding: 20px;
     text-align: left;
+
+}
+
+.info p{
+    color: #ffffff;
+    font-size: 20px;
 }
 
 
