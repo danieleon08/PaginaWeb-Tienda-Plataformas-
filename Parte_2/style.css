@@ -5,6 +5,7 @@ body {
     padding: 0;
     text-align: center;
     background-color: #fffec0;
+    
 }
 
 /* Encabezado */
@@ -14,6 +15,18 @@ header {
     justify-content: space-between; /* Nombre a la izquierda, carrito a la derecha */
     align-items: center;
     padding: 10px 20px;
+    
+}
+header img{
+    width: 80px;
+    height: 80px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Opcional: centra horizontalmente también */
 }
 
 header h1 {
@@ -22,10 +35,15 @@ header h1 {
     font-family: "Dancing Script", serif;
 }
 
-header h2{
+header p{
     font-size: 15px;
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
+}
+
+header p:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 h2 {
@@ -41,6 +59,10 @@ h2 {
 .carrito {
     font-size: 30px;
 }
+.carrito:hover{
+    transform: scale(2);
+    transition: 0.3s ease-in-out;
+}
 
 
 /* Estilos para la imagen del carrito (si usas la opción 2) */
@@ -48,6 +70,8 @@ h2 {
     width: 24px;  /* Ajusta el tamaño */
     height: auto;
 }
+
+
 
 /* Sección principal */
 main {
@@ -58,17 +82,34 @@ main {
 }
 
 .info {
-    width: 50%;
-    background-color: #444; /* Fondo más oscuro */;
-    border: 2px solid #cdca00; /* Borde oscuro */
+    width: 100%;
+    border: 2px solid #ffb300; /* Borde oscuro */
     padding: 20px;
     text-align: left;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+    font-size: 18px;
+    text-align: center; /* Centrar el texto */
+    color: #333; /* Color oscuro para contraste */
+    background: linear-gradient(135deg, #3e3c3b, #252525); /* Fondo degradado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el bloque */
+}
 
+.info:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 .info p{
     color: #ffffff;
     font-size: 20px;
+}
+
+.plataformas{
+    width: 80%; 
+    height: 80%;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -124,6 +165,16 @@ main {
 
 .flex-vertical button:hover {
     background-color: #45a049; /* Cambio de color al pasar el ratón */
+}
+
+
+.separador {
+    border: none; /* Elimina el estilo predeterminado */
+    height: 4px; /* Grosor de la línea */
+    background: linear-gradient(to right, #fffa70, #ffb300); /* Degradado */
+    margin: 30px auto; /* Espaciado arriba y abajo */
+    width: 80%; /* Ancho de la línea */
+    border-radius: 2px; /* Bordes redondeados */
 }
 
 
@@ -187,8 +238,13 @@ tr:hover {
     font-size: 16px;
   }
 
-  .tablaCarrito {
+.tablaCarrito {
     display: none;
+    position: absolute;
+    top: 50px; /* Ajusta la distancia desde la parte superior */
+    right: 80px;
+    width: 300px;
+    
 }
 
 tfoot {

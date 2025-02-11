@@ -15,9 +15,12 @@
 
     <!-- Encabezado -->
      <header>
-        <h1>LionView</h1>
-        <h2 href="#Plataformas">Plataformas</h2>
-        <h2 href="#Agregar">Agregar plataforma</h2>  
+        <div class="logo">
+            <img src="leonLogo.png" alternative="leonlogo"></img>
+            <h1>LionView</h1>
+        </div>
+        <p href="#plataformas">Plataformas</p>
+        <p href="#forms">Agregar plataforma</p>  
         <span class="carrito">🛒</span>
     </header>
 
@@ -25,9 +28,11 @@
     <main>
         <div class="info">
             <p>Te damos la bienvenida a la pagina principal de <span class="LionStream">LionView</span>, en esta pagina podras adquirir cualquier tipo de plataforma de streaming, al mejor precio, calidad y sobretodo 100% originales.
-            Podras escoger las plataformas de tu elección y disfrutar de tus contenidos favoritos, sin limites. Importante resaltar que <span class="LionStream">LionView</span> te garantiza totalmente el tiempo y la calidad del servicio,
-            por lo que contamos con un soporte de servicio todos los dias para atender cualquier tipo de inconveniente.
+            Podras escoger las plataformas de tu elección y disfrutar de tus contenidos favoritos, sin limites.
             </p>
+        </div>
+        <div>
+            <img src="Plataformas.webp" alternative="plataformas" class="plataformas"></div>
         </div>
         <div class="tablaCarrito">
             <table id="tabla-carrito">
@@ -59,7 +64,7 @@
     </main>
 
 
-    <h2 id="Plataformas">PLATAFORMAS</h2>
+    <h2 id="plataformas">PLATAFORMAS</h2>
 
     <div id="productos-container" class="flex-horizontal">
 
@@ -100,12 +105,12 @@
 
     </div> 
 
-    <h2>------------------------------------  //  ------------------------------------</h2>
+    <hr class="separador"></hr>
    
 
         <form class="formulario">
             <fieldset>
-                <legend href="Agregar">Agregar Plataforma</legend>
+                <legend href="Agregar" id="forms">Agregar Plataforma</legend>
 
                 <label for="txtNombre">Nombre</label>
                 <input type="text" placeholder="Nombre" name="nombree" id="txtNombre" />
