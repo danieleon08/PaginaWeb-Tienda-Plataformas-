@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productosContainer = document.getElementById("productos-container");
     const btnAgregarArticulo = document.getElementById("agregar-articulo");
 
-    // Función para agregar un producto al carrito
+    // 🔹 Función para agregar un producto al carrito
     function agregarAlCarrito(event) {
         const boton = event.target;
         const nombre = boton.getAttribute("data-nombre");
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         actualizarCarrito();
     }
 
-    // Función para actualizar la tabla del carrito
+    // 🔹 Función para actualizar la tabla del carrito
     function actualizarCarrito() {
         carritoBody.innerHTML = ""; // Limpia la tabla antes de actualizar
         let total = 0; // Variable para calcular el total
@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // Sumar al total (precio * cantidad)
             total += producto.precio * producto.cantidad;
         });
-        
 
         // Actualizar el total en la tabla
         document.getElementById("total-precio").textContent = `${total.toLocaleString()} COP`;
@@ -67,34 +66,31 @@ document.addEventListener("DOMContentLoaded", () => {
         tablaCarrito.style.display = carrito.length > 0 ? "block" : "none";
     }
 
-
-    // Función para eliminar un producto del carrito
+    // 🔹 Función para eliminar un producto del carrito
     function eliminarDelCarrito(event) {
         const index = event.target.getAttribute("data-index");
         carrito.splice(index, 1);
         actualizarCarrito();
     }
 
-    // Función para vaciar el carrito
-
+    // 🔹 Función para vaciar el carrito
     function vaciarCarrito() {
         carrito.length = 0; // Vacía la lista de productos
         actualizarCarrito(); // Actualiza la tabla
         document.getElementById("total-precio").textContent = "0 COP"; // Borra el total
     }
 
-
-    // Función para agregar un nuevo artículo a la tienda
+    // 🔹 Función para agregar un nuevo artículo a la tienda
     function agregarNuevoArticulo() {
         const nombre = document.getElementById("txtNombre").value.trim();
         const calidad = document.getElementById("selectCalidad").value.trim();
         const duracion = document.getElementById("txtDuracion").value.trim();
         const pantallas = document.getElementById("txtNumero").value.trim();
         const precio = parseFloat(document.getElementById("txtPrecio").value);
-        const imagenInput = document.getElementById("imagen");
+        const imagenURL = document.getElementById("imagen").value.trim(); // Ahora es una URL
 
         // Validaciones
-        if (!nombre || !calidad || !duracion || !pantallas || isNaN(precio) || !imagenInput.files.length) {
+        if (!nombre || !calidad || !duracion || !pantallas || isNaN(precio) || !imagenURL) {
             alert("Todos los campos son obligatorios.");
             return;
         }
@@ -104,15 +100,20 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Obtener la URL de la imagen subida
-        const imagenURL = URL.createObjectURL(imagenInput.files[0]);
 
         // Crear la tarjeta del nuevo producto
         const nuevaTarjeta = document.createElement("div");
-        nuevaTarjeta.classList.add("flex-vertical", "nueva-tarjeta");
+        nuevaTarjeta.classList.add("flex-vertical");
 
-        nuevaTarjeta.innerHTML = `
-            <img class="iconoTarjeta" src="${imagenURL}" alt="${nombre}">
+        // Crear la imagen con la clase correcta
+        const imagen = document.createElement("img");
+        imagen.src = imagenURL;
+        imagen.alt = nombre;
+        imagen.classList.add("iconoTarjeta");
+
+        // Insertar el contenido en la tarjeta
+        nuevaTarjeta.appendChild(imagen);
+        nuevaTarjeta.innerHTML += `
             <p>${nombre}</p>
             <ul>
                 <li>${calidad}</li>
@@ -135,10 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("txtDuracion").value = "";
         document.getElementById("txtNumero").value = "";
         document.getElementById("txtPrecio").value = "";
-        imagenInput.value = "";
+        document.getElementById("imagen").value = "";
     }
 
-    // Mostrar el carrito al pasar el mouse sobre el icono
+    // 🔹 Mostrar el carrito al pasar el mouse sobre el icono
     carritoIcono.addEventListener("mouseenter", () => {
         if (carrito.length > 0) {
             tablaCarrito.style.display = "block";
@@ -161,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tablaCarrito.style.display = "none";
     });
 
-    // Eventos
+    // 🔹 Eventos
     btnsAgregar.forEach(btn => btn.addEventListener("click", agregarAlCarrito));
     btnVaciar.addEventListener("click", vaciarCarrito);
     btnAgregarArticulo.addEventListener("click", agregarNuevoArticulo);
